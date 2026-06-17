@@ -3,7 +3,6 @@
 	import { page } from '$app/stores';
 	import { derived } from 'svelte/store';
 	import logo from './images/logo.png';
-	import studentsStudying from './images/students-studying-image.webp';
 
 	// Functions
 	const isAdminRoute = derived(page, ($page) => {
@@ -11,23 +10,21 @@
 	});
 </script>
 
-<div class="flex min-h-screen flex-col bg-gradient-to-b from-indigo-50 to-white">
+<div class="flex min-h-screen flex-col bg-gradient-to-b from-[#0b0b12] to-black text-gray-100">
 	<header
-		class="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+		class="sticky top-0 z-40 w-full border-b border-white/10 bg-gradient-to-r from-gray-700/40 via-gray-800/30 to-gray-900/40 backdrop-blur"
 		style:display={$isAdminRoute ? 'none' : 'block'}
 	>
 		<div class="container m-auto flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
 			<div class="flex items-center gap-2 text-xl font-bold">
 				<img src={logo} alt="logo" id="logo" class="filter" />
-				<span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-					PD Enterprise
-				</span>
+				<span class="text-white"> PD Enterprise </span>
 			</div>
 			<div class="flex flex-1 items-center justify-end space-x-4">
 				<nav class="flex items-center space-x-1">
 					<a
 						href="#products"
-						class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors hover:text-indigo-600"
+						class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-gray-200 transition-colors hover:text-indigo-400"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +47,7 @@
 					</a>
 					<a
 						href="#about"
-						class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors hover:text-indigo-600"
+						class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-gray-200 transition-colors hover:text-indigo-400"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +68,7 @@
 					</a>
 					<a
 						href="/blog"
-						class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors hover:text-indigo-600"
+						class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-gray-200 transition-colors hover:text-indigo-400"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -98,61 +95,34 @@
 	</header>
 
 	<main class="m-auto flex-1">
-		<section class="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-			<div class="container px-8 md:px-12">
-				<div class="grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-					<div class="flex flex-col justify-center space-y-6">
-						<div class="space-y-4">
-							<div
-								class="mb-2 inline-block rounded-lg bg-indigo-200 px-3 py-1 text-sm text-indigo-800"
+		<section class="relative w-full overflow-hidden py-24 md:py-36 lg:py-44 xl:py-52">
+			<div
+				class="pointer-events-none absolute left-1/2 top-0 h-64 w-64 -translate-x-1/2 rounded-full bg-purple-600 opacity-20 blur-3xl"
+			></div>
+			<div class="container relative px-8 md:px-12">
+				<div class="mx-auto flex max-w-3xl flex-col items-center space-y-6 text-center">
+					<h1 class="text-3xl font-bold tracking-tight text-white sm:text-5xl xl:text-6xl/none">
+						Empowering Students, Simplifying Learning.
+					</h1>
+					<p class="max-w-[600px] text-gray-400 md:text-lg">
+						We create innovative student-focused software tools to help you learn smarter, not
+						harder.
+					</p>
+					<div class="flex flex-col gap-3 min-[400px]:flex-row">
+						<a href="/blog">
+							<button
+								class="inline-flex h-11 items-center justify-center gap-2 whitespace-nowrap rounded-md bg-gradient-to-r from-indigo-600 to-purple-600 px-8 text-sm font-medium text-white ring-offset-background transition-colors hover:from-indigo-700 hover:to-purple-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
 							>
-								Built by students, for students
-							</div>
-							<h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-								Empowering Students.{' '}
-								<span
-									class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
-								>
-									Simplifying Learning.
-								</span>
-							</h1>
-							<p class="max-w-[600px] text-gray-600 md:text-xl">
-								We create innovative student-focused software tools to help you learn smarter, not
-								harder. From AI-powered study companions to collaborative note-taking, PD Enterprise
-								equips you for success.
-							</p>
-						</div>
-						<div class="flex flex-col gap-3 min-[400px]:flex-row">
-							<a href="/blog">
-								<button
-									class="inline-flex h-11 items-center justify-center gap-2 whitespace-nowrap rounded-md bg-gradient-to-r from-indigo-600 to-purple-600 px-8 text-sm font-medium ring-offset-background transition-colors hover:from-indigo-700 hover:to-purple-700 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
-								>
-									Check out our blog!
-								</button>
-							</a>
-							<a href="#products">
-								<button
-									class="inline-flex h-11 items-center justify-center gap-2 whitespace-nowrap rounded-md border border-indigo-600 border-input bg-background px-8 text-sm font-medium text-indigo-600 ring-offset-background transition-colors hover:bg-accent hover:bg-indigo-50 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
-								>
-									Explore Products
-								</button>
-							</a>
-						</div>
-					</div>
-					<div class="relative">
-						<div
-							class="absolute -left-6 -top-6 h-24 w-24 rounded-full bg-purple-200 opacity-60 blur-xl"
-						></div>
-						<div
-							class="absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-indigo-200 opacity-60 blur-xl"
-						></div>
-						<img
-							src={studentsStudying}
-							width="550px"
-							height="550px"
-							alt="Students collaborating on a project"
-							class="mx-auto aspect-video overflow-hidden rounded-xl object-cover shadow-lg sm:w-full lg:order-last"
-						/>
+								Check out our blog!
+							</button>
+						</a>
+						<a href="#products">
+							<button
+								class="inline-flex h-11 items-center justify-center gap-2 whitespace-nowrap rounded-md border border-indigo-500/60 bg-white/5 px-8 text-sm font-medium text-indigo-300 ring-offset-background transition-colors hover:bg-indigo-500/10 hover:text-indigo-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+							>
+								Explore Products
+							</button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -162,14 +132,14 @@
 			<div class="container px-8 md:px-12">
 				<div class="mb-12 flex flex-col items-center justify-center space-y-4 text-center">
 					<div class="space-y-2">
-						<div class="inline-block rounded-lg bg-indigo-100 px-3 py-1 text-sm text-indigo-800">
+						<div class="inline-block rounded-lg bg-indigo-500/15 px-3 py-1 text-sm text-indigo-300">
 							Our Products
 						</div>
-						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
+						<h2 class="text-3xl font-bold tracking-tighter text-white sm:text-5xl">
 							Tools Built for Student Success
 						</h2>
 						<p
-							class="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+							class="max-w-[900px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
 						>
 							Our suite of educational tools helps students excel in their academic journey.
 						</p>
@@ -178,7 +148,7 @@
 
 				<div class="grid gap-10 lg:grid-cols-2">
 					<card
-						class="overflow-hidden rounded-lg border-0 bg-card bg-gradient-to-br from-indigo-50 to-white text-card-foreground shadow-lg"
+						class="relative overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br from-gray-800 to-gray-900 text-gray-100 shadow-lg"
 					>
 						<div
 							class="absolute right-0 top-0 -mr-10 -mt-10 h-32 w-32 rounded-full bg-indigo-200 opacity-20 blur-2xl"
@@ -219,14 +189,14 @@
 									<cardTitle class="text-2xl font-semibold leading-none tracking-tight"
 										>Grade AI</cardTitle
 									>
-									<cardDescription class="text-sm text-gray-600 text-muted-foreground"
+									<cardDescription class="text-sm text-gray-400 text-muted-foreground"
 										>AI-powered learning assistant</cardDescription
 									>
 								</div>
 							</div>
 						</cardHeader>
 						<cardContent class="space-y-4 p-6">
-							<p class="p-6 text-gray-600">
+							<p class="p-6 text-gray-300">
 								A specially trained AI model designed not just to answer questions, but to teach
 								students every concept thoroughly. Grade AI explains complex topics in simple terms,
 								provides step-by-step solutions, and adapts to your learning style.
@@ -244,7 +214,7 @@
 					</card>
 
 					<card
-						class="overflow-hidden rounded-lg border-0 bg-card bg-gradient-to-br from-indigo-50 to-white text-card-foreground shadow-lg"
+						class="relative overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br from-gray-800 to-gray-900 text-gray-100 shadow-lg"
 					>
 						<div
 							class="absolute right-0 top-0 -mr-10 -mt-10 h-32 w-32 rounded-full bg-purple-200 opacity-20 blur-2xl"
@@ -276,14 +246,14 @@
 									<cardTitle class="text-2xl font-semibold leading-none tracking-tight"
 										>cnotes</cardTitle
 									>
-									<cardDescription class="text-sm text-gray-600 text-muted-foreground"
+									<cardDescription class="text-sm text-gray-400 text-muted-foreground"
 										>Collaborative note-taking platform</cardDescription
 									>
 								</div>
 							</div>
 						</cardHeader>
 						<cardContent class="space-y-4 p-6">
-							<p class="p-6 text-gray-600">
+							<p class="p-6 text-gray-300">
 								A note-taking platform that makes organizing and sharing notes easier than ever.
 								Create structured notes with rich formatting, collaborate with classmates in
 								real-time, and access your study materials from any device.
@@ -302,28 +272,25 @@
 
 				<div class="mt-16 text-center">
 					<div
-						class="inline-block rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 px-6 py-3"
+						class="inline-block rounded-full border border-white/10 bg-gradient-to-r from-indigo-500/15 to-purple-500/15 px-6 py-3"
 					>
-						<p class="font-medium text-gray-700">More innovative apps launching soon!</p>
+						<p class="font-medium text-gray-200">More innovative apps launching soon!</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section
-			id="about"
-			class="w-full bg-gradient-to-b from-white to-indigo-50 py-16 md:py-24 lg:py-32"
-		>
+		<section id="about" class="w-full py-16 md:py-24 lg:py-32">
 			<div class="container px-8 md:px-12">
 				<div class="grid gap-12 lg:grid-cols-2">
 					<div class="space-y-6">
-						<div class="inline-block rounded-lg bg-indigo-100 px-3 py-1 text-sm text-indigo-800">
+						<div class="inline-block rounded-lg bg-indigo-500/15 px-3 py-1 text-sm text-indigo-300">
 							Our Story
 						</div>
-						<h2 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+						<h2 class="text-3xl font-bold tracking-tighter text-white md:text-4xl/tight">
 							Created by Students Who Understand Your Challenges
 						</h2>
-						<div class="space-y-4 text-gray-600">
+						<div class="space-y-4 text-gray-300">
 							<p class="md:text-lg">
 								We understand the challenges students face because we've been there ourselves.
 								Founded by a student who experienced the struggles of juggling classes, studying
@@ -331,15 +298,15 @@
 								innovative tools that empower students to reach their full potential.
 							</p>
 							<div class="space-y-4 pt-4">
-								<div class="rounded-xl bg-indigo-200 p-6 shadow-sm">
-									<h3 class="mb-2 text-xl font-semibold text-indigo-600">Our Mission</h3>
+								<div class="rounded-xl border border-indigo-500/20 bg-indigo-500/10 p-6 shadow-sm">
+									<h3 class="mb-2 text-xl font-semibold text-indigo-300">Our Mission</h3>
 									<p>
 										We believe every student deserves access to resources that make learning
 										engaging, efficient, and collaborative.
 									</p>
 								</div>
-								<div class="rounded-xl bg-purple-200 p-6 shadow-sm">
-									<h3 class="mb-2 text-xl font-semibold text-purple-600">Our Vision</h3>
+								<div class="rounded-xl border border-purple-500/20 bg-purple-500/10 p-6 shadow-sm">
+									<h3 class="mb-2 text-xl font-semibold text-purple-300">Our Vision</h3>
 									<p>
 										To be the leading provider of student-focused software, transforming the way
 										students learn and achieve academic success.
@@ -360,12 +327,12 @@
 							width={600}
 							height={500}
 							alt="PD Enterprise team"
-							class="mx-auto aspect-video overflow-hidden rounded-xl bg-indigo-50 object-cover shadow-lg"
+							class="mx-auto aspect-video overflow-hidden rounded-xl bg-gray-800 object-cover shadow-lg"
 						/>
 						<div class="mt-8 grid grid-cols-2 gap-6">
-							<div class="rounded-xl bg-indigo-100 p-6 shadow-sm">
-								<h3 class="text-2xl font-bold text-indigo-600">1+</h3>
-								<p class="text-gray-600">Active Student Users</p>
+							<div class="rounded-xl border border-indigo-500/20 bg-indigo-500/10 p-6 shadow-sm">
+								<h3 class="text-2xl font-bold text-indigo-300">1+</h3>
+								<p class="text-gray-400">Active Student Users</p>
 							</div>
 						</div>
 					</div>
@@ -377,7 +344,7 @@
 			<div class="container px-8 md:px-12">
 				<div class="mb-12 flex flex-col items-center justify-center space-y-4 text-center">
 					<div class="space-y-2">
-						<div class="inline-block rounded-lg bg-indigo-100 px-3 py-1 text-sm text-indigo-800">
+						<div class="inline-block rounded-lg bg-indigo-500/15 px-3 py-1 text-sm text-indigo-300">
 							Testimonials
 						</div>
 						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">What Students Say</h2>
@@ -529,7 +496,7 @@
 		</section> -->
 	</main>
 
-	<footer class="w-full border-t">
+	<footer class="w-full border-t border-white/10">
 		<div class="container m-auto flex flex-col gap-8 px-8 py-12 md:flex-row md:py-16">
 			<div class="flex flex-col gap-3 md:w-1/3">
 				<div class="flex items-center gap-2 text-xl font-bold">
@@ -540,7 +507,7 @@
 						PD Enterprise
 					</span>
 				</div>
-				<p class="text-gray-600">
+				<p class="text-gray-400">
 					Built by students, for students. Educational software solutions designed to enhance
 					learning experiences.
 				</p>
@@ -549,39 +516,39 @@
 				<div class="flex flex-col gap-3">
 					<h3 class="text-base font-medium">Products</h3>
 					<nav class="flex flex-col gap-2">
-						<a href="#" class="text-gray-600 hover:text-indigo-600"> Grade AI </a>
-						<a href="#" class="text-gray-600 hover:text-indigo-600"> cnotes </a>
-						<a href="#" class="text-gray-600 hover:text-indigo-600"> Coming Soon </a>
+						<a href="#" class="text-gray-400 hover:text-indigo-400"> Grade AI </a>
+						<a href="#" class="text-gray-400 hover:text-indigo-400"> cnotes </a>
+						<a href="#" class="text-gray-400 hover:text-indigo-400"> Coming Soon </a>
 					</nav>
 				</div>
 				<div class="flex flex-col gap-3">
 					<h3 class="text-base font-medium">Resources</h3>
 					<nav class="flex flex-col gap-2">
-						<a href="#" class="text-gray-600 hover:text-indigo-600"> Documentation </a>
-						<a href="#" class="text-gray-600 hover:text-indigo-600"> Tutorials </a>
-						<a href="#" class="text-gray-600 hover:text-indigo-600"> Blog </a>
-						<a href="#" class="text-gray-600 hover:text-indigo-600"> Support </a>
+						<a href="#" class="text-gray-400 hover:text-indigo-400"> Documentation </a>
+						<a href="#" class="text-gray-400 hover:text-indigo-400"> Tutorials </a>
+						<a href="#" class="text-gray-400 hover:text-indigo-400"> Blog </a>
+						<a href="#" class="text-gray-400 hover:text-indigo-400"> Support </a>
 					</nav>
 				</div>
 				<div class="flex flex-col gap-3">
 					<h3 class="text-base font-medium">Company</h3>
 					<nav class="flex flex-col gap-2">
-						<a href="#" class="text-gray-600 hover:text-indigo-600"> About </a>
-						<a href="#" class="text-gray-600 hover:text-indigo-600"> Careers </a>
-						<a href="#" class="text-gray-600 hover:text-indigo-600"> Contact </a>
-						<a href="#" class="text-gray-600 hover:text-indigo-600"> Privacy Policy </a>
+						<a href="#" class="text-gray-400 hover:text-indigo-400"> About </a>
+						<a href="#" class="text-gray-400 hover:text-indigo-400"> Careers </a>
+						<a href="#" class="text-gray-400 hover:text-indigo-400"> Contact </a>
+						<a href="#" class="text-gray-400 hover:text-indigo-400"> Privacy Policy </a>
 					</nav>
 				</div>
 			</div>
 		</div>
 		<div
-			class="container m-auto flex flex-col gap-4 border-t px-8 py-6 md:flex-row md:items-center md:justify-between"
+			class="container m-auto flex flex-col gap-4 border-t border-white/10 px-8 py-6 md:flex-row md:items-center md:justify-between"
 		>
 			<p class="text-sm text-gray-500">
 				&copy; {new Date().getFullYear()} PD Enterprise. All rights reserved.
 			</p>
 			<div class="flex gap-6">
-				<a href="#" class="text-gray-500 hover:text-indigo-600">
+				<a href="#" class="text-gray-500 hover:text-indigo-400">
 					<span class="sr-only">GitHub</span>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
