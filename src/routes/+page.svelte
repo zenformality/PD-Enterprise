@@ -70,7 +70,7 @@
 						</a>
 						<a href="#products">
 							<button
-								class="inline-flex h-11 items-center justify-center gap-2 whitespace-nowrap rounded-full border border-[#d0bcff]/60 bg-transparent px-8 text-sm font-medium text-[#d0bcff] ring-offset-background transition-colors hover:bg-[#d0bcff]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+								class="inline-flex h-11 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#d0bcff] px-8 text-sm font-medium text-[#21005d] ring-offset-background transition-colors hover:bg-[#c3abf7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
 							>
 								Explore Products
 							</button>
