@@ -63,14 +63,14 @@
 					<div class="flex flex-col gap-3 min-[400px]:flex-row">
 						<a href="/blog">
 							<button
-								class="inline-flex h-11 items-center justify-center gap-2 whitespace-nowrap rounded-md bg-gradient-to-r from-indigo-600 to-purple-600 px-8 text-sm font-medium text-white ring-offset-background transition-colors hover:from-indigo-700 hover:to-purple-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+								class="inline-flex h-11 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#d0bcff] px-8 text-sm font-medium text-[#21005d] ring-offset-background transition-colors hover:bg-[#c3abf7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
 							>
 								Check out our blog!
 							</button>
 						</a>
 						<a href="#products">
 							<button
-								class="inline-flex h-11 items-center justify-center gap-2 whitespace-nowrap rounded-md border border-indigo-500/60 bg-white/5 px-8 text-sm font-medium text-indigo-300 ring-offset-background transition-colors hover:bg-indigo-500/10 hover:text-indigo-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+								class="inline-flex h-11 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#d0bcff] px-8 text-sm font-medium text-[#21005d] ring-offset-background transition-colors hover:bg-[#c3abf7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
 							>
 								Explore Products
 							</button>
@@ -100,7 +100,7 @@
 
 				<div class="grid gap-10 lg:grid-cols-2">
 					<card
-						class="relative overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br from-gray-800 to-gray-900 text-gray-100 shadow-lg"
+						class="relative overflow-hidden rounded-lg border border-white/10 bg-[#28262c] text-gray-100 shadow-lg"
 					>
 						<cardHeader class="flex flex-col space-y-1.5 p-6 pb-0">
 							<div class="flex items-center gap-4">
@@ -129,7 +129,7 @@
 							<div class="p-4">
 								<a href="/products/grade-ai">
 									<button
-										class="btn inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-md border-none bg-indigo-600 px-4 py-2 text-sm font-medium text-white ring-offset-background transition-colors hover:bg-indigo-700 hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+										class="btn inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full border-none bg-[#d0bcff] px-4 py-2 text-sm font-medium text-[#21005d] ring-offset-background transition-colors hover:bg-[#c3abf7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
 									>
 										Learn More
 									</button>
@@ -139,7 +139,7 @@
 					</card>
 
 					<card
-						class="relative overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br from-gray-800 to-gray-900 text-gray-100 shadow-lg"
+						class="relative overflow-hidden rounded-lg border border-white/10 bg-[#28262c] text-gray-100 shadow-lg"
 					>
 						<cardHeader class="flex flex-col space-y-1.5 p-6 pb-0">
 							<div class="flex items-center gap-4">
@@ -165,7 +165,7 @@
 							<div class="p-4">
 								<a href="/products/cnotes">
 									<button
-										class="btn inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-md border-none bg-indigo-600 px-4 py-2 text-sm font-medium text-white ring-offset-background transition-colors hover:bg-indigo-700 hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+										class="btn inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full border-none bg-[#d0bcff] px-4 py-2 text-sm font-medium text-[#21005d] ring-offset-background transition-colors hover:bg-[#c3abf7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
 										>Learn More</button
 									>
 								</a>
@@ -196,16 +196,16 @@
 						</p>
 					</div>
 					<div class="mt-10 grid gap-6 md:grid-cols-2">
-						<div class="rounded-xl border border-indigo-500/20 bg-indigo-500/10 p-6 shadow-sm">
-							<h3 class="mb-2 text-xl font-semibold text-indigo-300">Our Mission</h3>
-							<p class="text-gray-300">
+						<div class="rounded-xl bg-[#d0bcff] p-6 shadow-sm">
+							<h3 class="mb-2 text-xl font-semibold text-[#21005d]">Our Mission</h3>
+							<p class="text-[#1d192b]">
 								We believe every student deserves access to resources that make learning engaging,
 								efficient, and collaborative.
 							</p>
 						</div>
-						<div class="rounded-xl border border-purple-500/20 bg-purple-500/10 p-6 shadow-sm">
-							<h3 class="mb-2 text-xl font-semibold text-purple-300">Our Vision</h3>
-							<p class="text-gray-300">
+						<div class="rounded-xl bg-[#efb8c8] p-6 shadow-sm">
+							<h3 class="mb-2 text-xl font-semibold text-[#492532]">Our Vision</h3>
+							<p class="text-[#31111d]">
 								To be the leading provider of student-focused software, transforming the way
 								students learn and achieve academic success.
 							</p>
