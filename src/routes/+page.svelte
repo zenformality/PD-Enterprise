@@ -95,11 +95,8 @@
 	</header>
 
 	<main class="m-auto flex-1">
-		<section class="relative w-full overflow-hidden py-24 md:py-36 lg:py-44 xl:py-52">
-			<div
-				class="pointer-events-none absolute left-1/2 top-0 h-64 w-64 -translate-x-1/2 rounded-full bg-purple-600 opacity-20 blur-3xl"
-			></div>
-			<div class="container relative px-8 md:px-12">
+		<section class="w-full py-24 md:py-36 lg:py-44 xl:py-52">
+			<div class="container px-8 md:px-12">
 				<div class="mx-auto flex max-w-3xl flex-col items-center space-y-6 text-center">
 					<h1 class="text-3xl font-bold tracking-tight text-white sm:text-5xl xl:text-6xl/none">
 						Empowering Students, Simplifying Learning.
@@ -150,9 +147,6 @@
 					<card
 						class="relative overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br from-gray-800 to-gray-900 text-gray-100 shadow-lg"
 					>
-						<div
-							class="absolute right-0 top-0 -mr-10 -mt-10 h-32 w-32 rounded-full bg-indigo-200 opacity-20 blur-2xl"
-						></div>
 						<cardHeader class="flex flex-col space-y-1.5 p-6 pb-0">
 							<div class="flex items-center gap-4">
 								<div class="rounded-full bg-indigo-100 p-3">
@@ -216,9 +210,6 @@
 					<card
 						class="relative overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br from-gray-800 to-gray-900 text-gray-100 shadow-lg"
 					>
-						<div
-							class="absolute right-0 top-0 -mr-10 -mt-10 h-32 w-32 rounded-full bg-purple-200 opacity-20 blur-2xl"
-						></div>
 						<cardHeader class="flex flex-col space-y-1.5 p-6 pb-0">
 							<div class="flex items-center gap-4">
 								<div class="rounded-full bg-purple-100 p-3">
@@ -316,12 +307,6 @@
 						</div>
 					</div>
 					<div class="relative">
-						<div
-							class="absolute -left-10 -top-10 h-40 w-40 rounded-full bg-indigo-200 opacity-30 blur-2xl"
-						></div>
-						<div
-							class="absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-purple-200 opacity-30 blur-2xl"
-						></div>
 						<img
 							src={''}
 							width={600}
