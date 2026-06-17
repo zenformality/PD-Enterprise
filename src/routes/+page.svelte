@@ -273,52 +273,29 @@
 
 		<section id="about" class="w-full py-16 md:py-24 lg:py-32">
 			<div class="container px-8 md:px-12">
-				<div class="grid gap-12 lg:grid-cols-2">
-					<div class="space-y-6">
-						<div class="inline-block rounded-lg bg-indigo-500/15 px-3 py-1 text-sm text-indigo-300">
-							Our Story
-						</div>
+				<div class="mx-auto max-w-4xl">
+					<div class="flex flex-col items-center space-y-4 text-center">
 						<h2 class="text-3xl font-bold tracking-tighter text-white md:text-4xl/tight">
 							Created by Students Who Understand Your Challenges
 						</h2>
-						<div class="space-y-4 text-gray-300">
-							<p class="md:text-lg">
-								We understand the challenges students face because we've been there ourselves.
-								Founded by a student who experienced the struggles of juggling classes, studying
-								effectively, and staying organized, PD Enterprise is dedicated to creating
-								innovative tools that empower students to reach their full potential.
-							</p>
-							<div class="space-y-4 pt-4">
-								<div class="rounded-xl border border-indigo-500/20 bg-indigo-500/10 p-6 shadow-sm">
-									<h3 class="mb-2 text-xl font-semibold text-indigo-300">Our Mission</h3>
-									<p>
-										We believe every student deserves access to resources that make learning
-										engaging, efficient, and collaborative.
-									</p>
-								</div>
-								<div class="rounded-xl border border-purple-500/20 bg-purple-500/10 p-6 shadow-sm">
-									<h3 class="mb-2 text-xl font-semibold text-purple-300">Our Vision</h3>
-									<p>
-										To be the leading provider of student-focused software, transforming the way
-										students learn and achieve academic success.
-									</p>
-								</div>
-							</div>
-						</div>
+						<p class="max-w-[700px] text-gray-400 md:text-lg">
+							We understand the challenges students face because we've been there ourselves.
+						</p>
 					</div>
-					<div class="relative">
-						<img
-							src={''}
-							width={600}
-							height={500}
-							alt="PD Enterprise team"
-							class="mx-auto aspect-video overflow-hidden rounded-xl bg-gray-800 object-cover shadow-lg"
-						/>
-						<div class="mt-8 grid grid-cols-2 gap-6">
-							<div class="rounded-xl border border-indigo-500/20 bg-indigo-500/10 p-6 shadow-sm">
-								<h3 class="text-2xl font-bold text-indigo-300">1+</h3>
-								<p class="text-gray-400">Active Student Users</p>
-							</div>
+					<div class="mt-10 grid gap-6 md:grid-cols-2">
+						<div class="rounded-xl border border-indigo-500/20 bg-indigo-500/10 p-6 shadow-sm">
+							<h3 class="mb-2 text-xl font-semibold text-indigo-300">Our Mission</h3>
+							<p class="text-gray-300">
+								We believe every student deserves access to resources that make learning engaging,
+								efficient, and collaborative.
+							</p>
+						</div>
+						<div class="rounded-xl border border-purple-500/20 bg-purple-500/10 p-6 shadow-sm">
+							<h3 class="mb-2 text-xl font-semibold text-purple-300">Our Vision</h3>
+							<p class="text-gray-300">
+								To be the leading provider of student-focused software, transforming the way
+								students learn and achieve academic success.
+							</p>
 						</div>
 					</div>
 				</div>
