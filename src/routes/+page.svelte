@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import { derived } from 'svelte/store';
 	import logo from './images/logo.png';
+	import Icon from '@iconify/svelte';
 
 	// Functions
 	const isAdminRoute = derived(page, ($page) => {
@@ -26,67 +27,21 @@
 						href="#products"
 						class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-gray-200 transition-colors hover:text-indigo-400"
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="lucide lucide-package h-4 w-4"
-							><path
-								d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"
-							></path><path d="M12 22V12"></path><path
-								d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"
-							></path><path d="m7.5 4.27 9 5.15"></path></svg
-						>
+						<Icon icon="material-symbols:inventory-2-outline" class="h-4 w-4" />
 						Products
 					</a>
 					<a
 						href="#about"
 						class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-gray-200 transition-colors hover:text-indigo-400"
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="lucide lucide-info h-4 w-4"
-							><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path
-								d="M12 8h.01"
-							></path></svg
-						>
+						<Icon icon="material-symbols:info-outline" class="h-4 w-4" />
 						About
 					</a>
 					<a
 						href="/blog"
 						class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-gray-200 transition-colors hover:text-indigo-400"
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="lucide lucide-newspaper h-4 w-4"
-							><path
-								d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"
-							></path><path d="M18 14h-8"></path><path d="M15 18h-5"></path><path
-								d="M10 6h8v4h-8V6Z"
-							></path></svg
-						>
+						<Icon icon="material-symbols:newspaper" class="h-4 w-4" />
 						Blog
 					</a>
 				</nav>
@@ -150,34 +105,10 @@
 						<cardHeader class="flex flex-col space-y-1.5 p-6 pb-0">
 							<div class="flex items-center gap-4">
 								<div class="rounded-full bg-indigo-100 p-3">
-									<brainCircuit class="h-8 w-8 text-indigo-600">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											class="lucide lucide-brain-circuit h-8 w-8 text-indigo-600"
-											><path
-												d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
-											></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path
-												d="M6.003 5.125A3 3 0 0 0 6.401 6.5"
-											></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path
-												d="M6 18a4 4 0 0 1-1.967-.516"
-											></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"
-											></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"
-											></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"
-											></circle><circle cx="20" cy="21" r=".5"></circle><circle
-												cx="20"
-												cy="8"
-												r=".5"
-											></circle></svg
-										>
-									</brainCircuit>
+									<Icon
+										icon="material-symbols:psychology-outline"
+										class="h-8 w-8 text-indigo-600"
+									/>
 								</div>
 								<div class="flex flex-col space-y-1.5">
 									<cardTitle class="text-2xl font-semibold leading-none tracking-tight"
@@ -213,25 +144,7 @@
 						<cardHeader class="flex flex-col space-y-1.5 p-6 pb-0">
 							<div class="flex items-center gap-4">
 								<div class="rounded-full bg-purple-100 p-3">
-									<notebookPen class="h-8 w-8 text-purple-600">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											class="lucide lucide-notebook-pen h-8 w-8 text-purple-600"
-											><path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4"
-											></path><path d="M2 6h4"></path><path d="M2 10h4"></path><path d="M2 14h4"
-											></path><path d="M2 18h4"></path><path
-												d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"
-											></path></svg
-										>
-									</notebookPen>
+									<Icon icon="material-symbols:edit-note" class="h-8 w-8 text-purple-600" />
 								</div>
 								<div class="flex flex-col space-y-1.5">
 									<cardTitle class="text-2xl font-semibold leading-none tracking-tight"
@@ -512,20 +425,7 @@
 			<div class="flex gap-6">
 				<a href="#" class="text-gray-500 hover:text-indigo-400">
 					<span class="sr-only">GitHub</span>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						class="h-5 w-5"
-					>
-						<path
-							d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-						></path>
-						<path d="M9 18c-4.51 2-5-2-7-2"></path>
-					</svg>
+					<Icon icon="material-symbols:code" class="h-5 w-5" />
 				</a>
 			</div>
 		</div>
