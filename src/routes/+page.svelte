@@ -27,20 +27,69 @@
 				<nav class="flex items-center space-x-1">
 					<a
 						href="#products"
-						class="px-3 py-2 text-sm font-medium transition-colors hover:text-indigo-600"
+						class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors hover:text-indigo-600"
 					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="lucide lucide-package h-4 w-4"
+							><path
+								d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"
+							></path><path d="M12 22V12"></path><path
+								d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"
+							></path><path d="m7.5 4.27 9 5.15"></path></svg
+						>
 						Products
 					</a>
 					<a
 						href="#about"
-						class="px-3 py-2 text-sm font-medium transition-colors hover:text-indigo-600"
+						class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors hover:text-indigo-600"
 					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="lucide lucide-info h-4 w-4"
+							><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path
+								d="M12 8h.01"
+							></path></svg
+						>
 						About
 					</a>
 					<a
 						href="/blog"
-						class="px-3 py-2 text-sm font-medium transition-colors hover:text-indigo-600"
+						class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors hover:text-indigo-600"
 					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="lucide lucide-newspaper h-4 w-4"
+							><path
+								d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"
+							></path><path d="M18 14h-8"></path><path d="M15 18h-5"></path><path
+								d="M10 6h8v4h-8V6Z"
+							></path></svg
+						>
 						Blog
 					</a>
 				</nav>
