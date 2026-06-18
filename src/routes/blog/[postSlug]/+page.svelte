@@ -3,7 +3,6 @@
 	import { onMount } from 'svelte';
 	import type { Post } from '../../types';
 	import formatDate from '$lib/utils/formatDate';
-	import Editor from '@tinymce/tinymce-svelte';
 	import { theme } from '$lib/stores/store';
 	import apiConfig from '$lib/utils/apiConfig';
 
