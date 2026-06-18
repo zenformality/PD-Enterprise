@@ -1,9 +1,9 @@
 <script lang="ts">
-	import './styles.css';
+	import './layout.css';
+	import favicon from '$lib/assets/favicon.svg';
 
-	// Variables
 	let { children } = $props();
-	let cookieValue: string;
 </script>
 
+<svelte:head><link rel="icon" href={favicon} /></svelte:head>
 {@render children()}

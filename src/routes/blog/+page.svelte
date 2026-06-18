@@ -1,21 +1,35 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { PageProps } from '../$types';
-	import type { Post } from '../types';
+	import type { Posts } from '../types';
 
-	let {
-		data
-	}: {
-		status: number;
-		message: string;
-		data: any;
-		error: string;
-	} = $props();
-	// console.log(data.data);
+	let posts: Posts[] = $state([]);
 
-	let posts: Post[] = data.data;
+	onMount(async () => {
+		getPosts();
+	});
+
+	async function getPosts() {
+		const response = await fetch('/blog', {
+			method: 'GET',
+			headers: { 'Content-Type': 'application/json' }
+		});
+		const result = await response.json();
+		// console.log(result.data);
+
+		posts = result.data;
+	}
 </script>
 
-{#each posts as post}
-	{post.title}
-{/each}
+{#await getPosts()}
+	<p>Loading Posts...</p>
+{:then}
+	{#each posts as post}
+		{post.title}<br />
+		{post.author}<br />
+		{post.date}<br />
+		{@html post.content}
+	{/each}
+{:catch error}
+	<p>{error.message}</p>
+{/await}

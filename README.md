@@ -1,9 +1,42 @@
-# PD Enterprise
+# sv
 
-Welcome to the **PD Enterprise** project! This is a web application designed to empower students by providing innovative software tools that simplify learning. The application is built using Sveltekit and  Typescript and is optimized for both desktop and mobile devices.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## About the Project
+## Creating a project
 
-We built **PD Enterprise** to create a user-friendly platform that allows students to access a wide range of educational software tools. We aim to create application that are designed to be easy to use, with a clean and modern interface that encourages exploration and learning.
+If you're seeing this, you've probably already done this step. Congrats!
 
-We aim to create a platform that fosters innovation and supports student success.
+```sh
+# create a new project
+npx sv create my-app
+```
+
+To recreate this project with the same configuration:
+
+```sh
+# recreate this project
+bun x sv@0.16.1 create --template minimal --types ts --add prettier eslint tailwindcss="plugins:typography,forms" --install bun ./
+```
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```sh
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```sh
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

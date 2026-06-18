@@ -1,10 +1,12 @@
-type Post = {
-    post_id: number
-    title: string;
+type Posts = {
+    id: number;
     slug: string;
+    title: string;
+    excerpt: string;
+    author: string;
+    date: Date;
+    category: string;
     content: string;
-    authorId: string;
-    createdAt: string;
 }
 
-export type { Post };
+export type { Posts };
