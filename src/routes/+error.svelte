@@ -4,7 +4,7 @@
 import { onMount } from 'svelte';
 
 	// Variables
-	let httpDogUrlStatusCode: string;
+	let httpDogUrlStatusCode: number = $state();
 	let imgSrc: string = $state()
 
 	// Functions
@@ -18,23 +18,24 @@ import { onMount } from 'svelte';
 			}
 		} catch (error) {
 			console.error('There was an error:', error);
+			httpDogUrlStatusCode = 500;
 		}
 	}
-	onMount(() => {
-		getStatusCode();
+	onMount(async () => {
+		await getStatusCode();
 		imgSrc = `https://http.dog/${httpDogUrlStatusCode}.jpg`;
 	});
 </script>
 
 <center>
-	<iframe src={imgSrc} title="Error" class="mt-5"></iframe>
+	<img src={imgSrc} title="Error" class="mt-5"/>
 </center>
 <center>
 	<a href={resolve("/")} class="btn mb-5 mt-5 text-3xl">Go To Home</a>
 </center>
 
 <style>
-	iframe {
+	img {
 		width: 41.16rem;
 		height: 36rem;
 	}
