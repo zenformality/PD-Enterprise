@@ -4,6 +4,7 @@
 	import { derived } from 'svelte/store';
 	import logo from './images/logo.png';
 	import Icon from '@iconify/svelte';
+	import { resolve } from '$app/paths';
 
 	// Functions
 	const isAdminRoute = derived(page, ($page) => {
@@ -11,9 +12,9 @@
 	});
 </script>
 
-<div class="flex min-h-screen flex-col bg-gradient-to-b from-[#0b0b12] to-black text-gray-100">
+<div class="flex min-h-screen flex-col bg-linear-to-b from-[#0b0b12] to-black text-gray-100">
 	<header
-		class="sticky top-0 z-40 w-full border-b border-white/10 bg-gradient-to-r from-gray-700/40 via-gray-800/30 to-gray-900/40 backdrop-blur"
+		class="sticky top-0 z-40 w-full border-b border-white/10 bg-linear-to-r from-gray-700/40 via-gray-800/30 to-gray-900/40 backdrop-blur"
 		style:display={$isAdminRoute ? 'none' : 'block'}
 	>
 		<div class="container m-auto flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
@@ -38,7 +39,7 @@
 						About
 					</a>
 					<a
-						href="/blog"
+						href={resolve("/blog")}
 						class="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-gray-200 transition-colors hover:text-indigo-400"
 					>
 						<Icon icon="material-symbols:newspaper" class="h-4 w-4" />
@@ -61,7 +62,7 @@
 						harder.
 					</p>
 					<div class="flex flex-col gap-3 min-[400px]:flex-row">
-						<a href="/blog">
+						<a href={resolve("/blog")}>
 							<button
 								class="inline-flex h-11 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#d0bcff] px-8 text-sm font-medium text-[#21005d] ring-offset-background transition-colors hover:bg-[#c3abf7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
 							>
@@ -127,7 +128,7 @@
 								provides step-by-step solutions, and adapts to your learning style.
 							</p>
 							<div class="p-4">
-								<a href="/products/grade-ai">
+								<a href={resolve("/products/grade-ai")}>
 									<button
 										class="btn inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full border-none bg-[#d0bcff] px-4 py-2 text-sm font-medium text-[#21005d] ring-offset-background transition-colors hover:bg-[#c3abf7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
 									>
@@ -163,7 +164,7 @@
 								real-time, and access your study materials from any device.
 							</p>
 							<div class="p-4">
-								<a href="/products/cnotes">
+								<a href={resolve("/products/cnotes")}>
 									<button
 										class="btn inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full border-none bg-[#d0bcff] px-4 py-2 text-sm font-medium text-[#21005d] ring-offset-background transition-colors hover:bg-[#c3abf7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
 										>Learn More</button
@@ -176,7 +177,7 @@
 
 				<div class="mt-16 text-center">
 					<div
-						class="inline-block rounded-full border border-white/10 bg-gradient-to-r from-indigo-500/15 to-purple-500/15 px-6 py-3"
+						class="inline-block rounded-full border border-white/10 bg-linear-to-r from-indigo-500/15 to-purple-500/15 px-6 py-3"
 					>
 						<p class="font-medium text-gray-200">More innovative apps launching soon!</p>
 					</div>
@@ -214,161 +215,6 @@
 				</div>
 			</div>
 		</section>
-
-		<!-- <section id="testimonials" class="w-full py-16 md:py-24 lg:py-32">
-			<div class="container px-8 md:px-12">
-				<div class="mb-12 flex flex-col items-center justify-center space-y-4 text-center">
-					<div class="space-y-2">
-						<div class="inline-block rounded-lg bg-indigo-500/15 px-3 py-1 text-sm text-indigo-300">
-							Testimonials
-						</div>
-						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">What Students Say</h2>
-						<p
-							class="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
-						>
-							Hear from students who have transformed their academic experience with our tools.
-						</p>
-					</div>
-				</div>
-				<div class="mx-auto grid max-w-5xl gap-8 py-8 md:grid-cols-2 lg:grid-cols-3">
-					<card
-						class="bg-card text-card-foreground overflow-hidden rounded-lg border-0 bg-gradient-to-br from-indigo-50 to-white shadow-lg"
-					>
-						<cardHeader class="flex flex-col space-y-1.5 p-6 pb-0">
-							<div class="flex items-center gap-4">
-								<div class="rounded-full bg-indigo-100 p-2">
-									<users class="h-5 w-5 text-indigo-600">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											class="lucide lucide-users h-5 w-5 text-indigo-600"
-											><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
-												cx="9"
-												cy="7"
-												r="4"
-											></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
-												d="M16 3.13a4 4 0 0 1 0 7.75"
-											></path></svg
-										>
-									</users>
-								</div>
-								<div class="flex flex-col space-y-1.5">
-									<cardTitle class="text-lg font-semibold leading-none tracking-tight"
-										>Alex Johnson</cardTitle
-									>
-									<cardDescription class="text-muted-foreground text-sm text-gray-600"
-										>Computer Science Major</cardDescription
-									>
-								</div>
-							</div>
-						</cardHeader>
-						<cardContent class="flex flex-col space-y-4 p-6 pt-6">
-							<p class="text-gray-600">
-								"Grade AI helped me understand complex algorithms that I was struggling with. It's
-								like having a tutor available 24/7 who actually teaches me how to solve problems."
-							</p>
-						</cardContent>
-					</card>
-					<card
-						class="bg-card text-card-foreground overflow-hidden rounded-lg border-0 bg-gradient-to-br from-indigo-50 to-white shadow-lg"
-					>
-						<cardHeader class="flex flex-col space-y-1.5 p-6 pb-0">
-							<div class="flex items-center gap-4">
-								<div class="rounded-full bg-purple-100 p-2">
-									<users class="h-5 w-5 text-purple-600">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											class="lucide lucide-users h-5 w-5 text-indigo-600"
-											><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
-												cx="9"
-												cy="7"
-												r="4"
-											></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
-												d="M16 3.13a4 4 0 0 1 0 7.75"
-											></path></svg
-										>
-									</users>
-								</div>
-								<div class="flex flex-col space-y-1.5">
-									<cardTitle class="text-lg font-semibold leading-none tracking-tight"
-										>Mia Rodriguez</cardTitle
-									>
-									<cardDescription class="text-muted-foreground text-sm text-gray-600"
-										>Biology Student</cardDescription
-									>
-								</div>
-							</div>
-						</cardHeader>
-						<cardContent class="flex flex-col space-y-4 p-6 pt-6">
-							<p class="text-gray-600">
-								"cnotes transformed how I organize my study materials. Being able to collaborate
-								with classmates and access my notes from anywhere has been a game-changer."
-							</p>
-						</cardContent>
-					</card>
-					<card
-						class="bg-card text-card-foreground overflow-hidden rounded-lg border-0 bg-gradient-to-br from-indigo-50 to-white shadow-lg"
-					>
-						<cardHeader class="flex flex-col space-y-1.5 p-6 pb-0">
-							<div class="flex items-center gap-4">
-								<div class="rounded-full bg-indigo-100 p-2">
-									<users class="h-5 w-5 text-indigo-600">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											class="lucide lucide-users h-5 w-5 text-indigo-600"
-											><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle
-												cx="9"
-												cy="7"
-												r="4"
-											></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path
-												d="M16 3.13a4 4 0 0 1 0 7.75"
-											></path></svg
-										>
-									</users>
-								</div>
-								<div class="flex flex-col space-y-1.5">
-									<cardTitle class="text-lg font-semibold leading-none tracking-tight"
-										>James Lee</cardTitle
-									>
-									<cardDescription class="text-muted-foreground text-sm text-gray-600"
-										>Engineering Major</cardDescription
-									>
-								</div>
-							</div>
-						</cardHeader>
-						<cardContent class="flex flex-col space-y-4 p-6 pt-6">
-							<p class="text-gray-600">
-								"The combination of Grade AI and cnotes has completely changed how I study. I'm
-								understanding concepts better and my grades have improved significantly."
-							</p>
-						</cardContent>
-					</card>
-				</div>
-			</div>
-		</section> -->
 	</main>
 
 	<footer class="w-full border-t border-white/10">
@@ -377,7 +223,7 @@
 				<div class="flex items-center gap-2 text-xl font-bold">
 					<img src={logo} alt="logo" id="logo" class="filter" />
 					<span
-						class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+						class="bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
 					>
 						PD Enterprise
 					</span>
